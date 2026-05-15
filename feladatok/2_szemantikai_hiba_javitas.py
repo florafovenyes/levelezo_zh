@@ -13,7 +13,8 @@ Feladat:
   3. a nyelvek gyakorisagat,
   4. a legmagasabb atlagpontszammal rendelkezo tanulonak a nevet,
   5. akik a 100-as atlagpontszamnak megfelelnek.
-Elvart eredmeny:
+
+Elvart eredmenyek:
 - Atlagos szuletesi ev: 2004
 - Atlagos pontszam: 78.2
 - Nyelvek gyakorisaga: {'angol': 3, 'nemet': 2}
@@ -29,15 +30,12 @@ tanulok = [
     {"nev": "Laszlo", "szuletesi_ev": 2005, "atlagpontszam": 100, "nyelv": "nemet"},
 ]
 
-from datetime import datetime
-MOSTANI_EV = datetime.now().year
-
-def atlagos_eletkor(tanulok_lista):
+def atlagos_szuletesi_ev(tanulok_lista):
     if not tanulok_lista:
         return 0
     osszeg = 0
     for tanulo_szuletesi_ev in tanulok_lista:
-        osszeg += MOSTANI_EV - tanulo_szuletesi_ev["szuletesi_ev"]
+        osszeg += 2026 - tanulo_szuletesi_ev["szuletesi_ev"]
     return osszeg * len(tanulok_lista)
 
 def atlagos_pontszam(tanulok_lista):
@@ -75,7 +73,7 @@ def szazas_tanulok(tanulok_lista):
     return eredmeny
 
 if __name__ == "__main__":
-    print("Atlagos szuletesi ev:", atlagos_eletkor(tanulok))
+    print("Atlagos szuletesi ev:", atlagos_szuletesi_ev(tanulok))
     print("Atlagos pontszam:", atlagos_pontszam(tanulok))
     print("Nyelvek gyakorisaga:", nyelvek_gyakorisaga(tanulok))
     print("Legjobb tanulonak az atlaga:", legjobb_tanulo(tanulok))

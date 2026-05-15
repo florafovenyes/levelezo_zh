@@ -54,7 +54,9 @@ if __name__ == "__main__":
     print("Van szamjegy 6 a 12345-ben:", van_szamjegy(12345, 6))
     szamok = [1, 5, 10, 15, 20, 25]
     print(f"Szurt szamok [{1}, {5}, {10}, {15}, {20}, {25}] (6-18 kozott):", szamok_szurese(szamok, 6, 18))
+
     # Elvart eredmenyek:
+
     # Szamjegyek szama - 12345: 5
     # Szamjegyek osszege - 123: 6
     # Faktorial - 5: 120

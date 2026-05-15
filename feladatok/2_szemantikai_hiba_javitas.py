@@ -8,7 +8,7 @@ Feladat:
 - Egy vegremenyet statisztikai feldolgozasa.
 - Minden vegzett tanulohoz tartozik: nev, szuletesi_ev, atlagpontszam, nyelv.
 - Szamold ki:
-  1. az atlagos eletkort (MOSTANI_EV - szuletesi_ev),
+  1. az atlagos szuletesi evet,
   2. az ossz atlagpontszam,
   3. a nyelvek gyakorisagat,
   4. a legmagasabb atlagpontszammal rendelkezo tanulonak a nevet,

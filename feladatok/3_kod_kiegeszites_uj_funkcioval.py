@@ -26,24 +26,34 @@ Kovetelmenyek:
 """
 
 def szamjegyek_szama(szam):
-    # TODO: valositsd meg
-    pass
+    return(len(str(szam)))
+
 
 def szamjegyek_osszege(szam):
-    # TODO: valositsd meg
-    pass
+    osszeg=0
+
+    while szam>0:
+        osszeg += szam % 10
+        szam //= 10
+    return osszeg
 
 def faktorial(n):
-    # TODO: valositsd meg (rekurzio javasolt)
-    pass
+
+    if n==0 or n==1:
+        return 1
+
+    return n * faktorial(n-1)
+
 
 def van_szamjegy(szam, szamjegy):
-    # TODO: valositsd meg
-    pass
+    return str(szamjegy) in str(szam)
 
 def szamok_szurese(szamok_lista, minimum, maximum):
-    # TODO: valositsd meg
-    pass
+    eredmeny = []
+    for szam in szamok_lista:
+        if szam <=minimum or szam >=maximum:
+            eredmeny.append(szam)
+    return eredmeny
 
 if __name__ == "__main__":
     # Tesztek az alabbi fuggvenyekre:
